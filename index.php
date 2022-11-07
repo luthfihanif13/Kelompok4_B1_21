@@ -44,52 +44,52 @@
       <div class="box">
         <div class="card">
           <img src="images/detektif conan.jpg" alt="Komik">
-          <p><a href="#">detektif conan</a></p>
+          <p><a href="dataKomik/detektif conan.pdf" target="_blank">detektif conan</a></p>
           <p><span class="genre">Action, mystery</span></p>
         </div>
         <div class="card">
           <img src="images/attack on titan.jpg" alt="Komik">
-          <p><a href="#">attack on titan</a></p>
+          <p><a href="dataKomik/AOT Shingeki no Kyojin Vol.01.pdf" target="_blank">attack on titan</a></p>
           <p><span class="genre">Action, thriller</span></p>
         </div>
         <div class="card">
           <img src="images/demon slayer.jpg" alt="Komik">
-          <p><a href="#">demon slayer</a></p>
+          <p><a href="dataKomik/demon slayer.pdf" target="_blank">demon slayer</a></p>
           <p><span class="genre">thriller, drama</span></p>
         </div>
         <div class="card">
           <img src="images/one punch man.png" alt="Komik">
-          <p><a href="#">one punch man</a></p>
+          <p><a href="dataKomik/One Punch Man Vol.01.pdf" target="_blank">one punch man</a></p>
           <p><span class="genre">comedy, action</span></p>
         </div>
         <div class="card">
           <img src="images/tokyo ghoul.jpg" alt="Komik">
-          <p><a href="#">tokyo ghoul</a></p>
+          <p><a href="dataKomik/Tokyo Ghoul Vol.01.pdf" target="_blank">tokyo ghoul</a></p>
           <p><span class="genre">slice of life, thriller</span></p>
         </div>
         <div class="card">
           <img src="images/my hero academia.jpg" alt="Komik">
-          <p><a href="#">my hero academia</a></p>
+          <p><a href="dataKomik/Boku no Hero Academia Vol.01.pdf" target="_blank">my hero academia</a></p>
           <p><span class="genre">action, fantasy</span></p>
         </div>
         <div class="card">
           <img src="images/naruto.jpg" alt="Komik">
-          <p><a href="#">naruto</a></p>
+          <p><a href="dataKomik/komik-naruto.pdf" target="_blank">naruto</a></p>
           <p><span class="genre">action, fantasy</span></p>
         </div>
         <div class="card">
           <img src="images/batman.jpg" alt="Komik">
-          <p><a href="#">batman</a></p>
+          <p><a href="dataKomik/komikBatman.pdf" target="_blank">batman</a></p>
           <p><span class="genre">action, comedy</span></p>
         </div>
         <div class="card">
           <img src="images/spiderman.jpeg" alt="Komik">
-          <p><a href="#">spiderman</a></p>
+          <p><a href="dataKomik/spiderman-comic.pdf" target="_blank">spiderman</a></p>
           <p><span class="genre">action, drama</span></p>
         </div>
         <div class="card">
           <img src="images/assassination classroom.jpg" alt="Komik">
-          <p><a href="#">yellow octopus</a></p>
+          <p><a href="dataKomik/assassination classroomVol.01.pdf" target="_blank">yellow octopus</a></p>
           <p><span class="genre">drama, comedy</span></p>
         </div>
       </div>
