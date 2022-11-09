@@ -10,13 +10,6 @@ while ($row = mysqli_fetch_assoc($result)) {
     $request_komik[] = $row;
 }
 
-$result = mysqli_query($conn, "SELECT * FROM gambar");
-$file = [];
-
-while ($row = mysqli_fetch_assoc($result)) {
-    $file[] = $row;
-}
-
 
 ?>
 <!DOCTYPE html>
