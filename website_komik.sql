@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 08, 2022 at 01:16 AM
+-- Generation Time: Nov 09, 2022 at 03:00 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -30,8 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `akun` (
   `id` int(11) NOT NULL,
   `nama` varchar(64) NOT NULL,
-  `password` varchar(64) NOT NULL,
-  `role` varchar(32) NOT NULL
+  `password` varchar(64) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
