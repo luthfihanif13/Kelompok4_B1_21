@@ -19,7 +19,7 @@
            <input type="password" class="password" placeholder="Password" required>
            <input type="password" class="password" type="password" placeholder="Konfirmasi Password" required>
            <input type="submit" value="registrasi" class="submit">
-           <a href="../login_user.php">Sudah punya akun? Login</a>
+           <a href="login_user.php">Sudah punya akun? Login</a>
        </div>
    </form> 
 </body>
