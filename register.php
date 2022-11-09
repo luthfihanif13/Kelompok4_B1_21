@@ -1,20 +1,20 @@
 <?php 
 include 'koneksi.php';
 if(isset($_POST['register'])){
-    $username = $_POST['nama'];
+    $username = $_POST['username'];
     $password = $_POST['password'];
     $cpassword = $_POST['confirm-pass'];
 
     if($password === $cpassword){
         $password = password_hash($password, PASSWORD_DEFAULT);
-        $result = mysqli_query($conn, "SELECT * FROM akun WHERE nama = '$username'");
+        $result = mysqli_query($conn, "SELECT * FROM akun WHERE username = '$username'");
         if(mysqli_fetch_assoc($result)){
             echo "<script>
             alert('Username Sudah digunakan');
             document.location.href = 'register.php';
             </script>";
         }else {
-            $sql = "INSERT INTO akun (nama, password) VALUES ('$username', '$password')";
+            $sql = "INSERT INTO akun (username, password) VALUES ('$username', '$password')";
             $result = mysqli_query($conn, $sql);
             if(mysqli_affected_rows($conn) > 0) {
                 echo "<script>
