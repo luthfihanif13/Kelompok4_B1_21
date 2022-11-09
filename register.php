@@ -7,7 +7,7 @@ if(isset($_POST['register'])){
 
     if($password === $cpassword){
         $password = password_hash($password, PASSWORD_DEFAULT);
-        $result = mysqli_query($conn, "SELECT * FROM akun WHERE username = '$username'");
+        $result = mysqli_query($conn, "SELECT * FROM 'akun' WHERE username = '$username'");
         if(mysqli_fetch_assoc($result)){
             echo "<script>
             alert('Username Sudah digunakan');
