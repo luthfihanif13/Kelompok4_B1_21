@@ -44,7 +44,7 @@ if(isset($_POST['register'])){
 </head>
 <body>
    <div class="overlay"></div>
-   <form action="login_user.php" method="post" class="box">
+   <form method="post" class="box">
        <div class="header_user">
            <h1>REGISTRASI</h1>
        </div>
