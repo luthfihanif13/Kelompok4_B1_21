@@ -1,3 +1,11 @@
+<?php
+  include 'koneksi.php';
+  if(!isset($_SESSION['login_user'])){
+    header("location:login_user.php");
+    exit;
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
