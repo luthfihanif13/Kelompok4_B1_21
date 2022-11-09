@@ -30,19 +30,19 @@
 </head>
 <body>
    <div class="overlay"></div>
+    <?php if(isset($error)){
+        echo '<script type="text/javascript">
+                window.onload = function () { alert("Username atau Password Salah!"); } 
+            </script>'; 
+    }?>
    <form action="index.php" method="post" class="box">
        <div class="header_user">
            <h1>LOGIN USER</h1>
        </div>
-       <?php if(isset($error)){
-            echo '<script type="text/javascript">
-                    window.onload = function () { alert("Username atau Password Salah!"); } 
-                </script>'; 
-        }?>
        <div class="login-area">
            <input type="text" class="username" placeholder="Username" name="username" id="username">
            <input type="password" class="password" placeholder="Password" type="password" name="password">
-           <input type="submit" value="login" name="login" class="submit">
+           <button type="submit" name="login" class="submit">Login</button>
            <a href="login_admin.php">Beralih ke Admin?</a>
            <a href="register.php">Belum punya akun? Register</a>
        </div>

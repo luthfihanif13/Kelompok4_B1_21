@@ -52,7 +52,7 @@ if(isset($_POST['register'])){
            <input type="text" name="username" id="username" class="username" placeholder="Username" required>
            <input type="password" name="password" id="password" class="password" placeholder="Password" required>
            <input type="password"  name="confirm-pass" id="confirm-pass" class="password" placeholder="Konfirmasi Password" required>
-           <input type="submit" class="submit" name="register" id="register">
+           <button type="submit" class="submit" name="register" id="register">Register</button>
            <a href="login_user.php">Sudah punya akun? Login</a>
        </div>
    </form> 
