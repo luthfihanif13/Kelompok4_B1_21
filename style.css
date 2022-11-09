@@ -248,22 +248,6 @@ input[type="checkbox"]:checked::before {
   color: var(--download-color);
 }
 
-/*Biodata*/
-#biodata {
-  font-size: 20px;
-  width: 60%;
-  margin: 4rem 0 5rem 0;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  transform: translate(33%);
-}
-
-#biodata img {
-  width: 20%;
-  border-radius: 55px;
-}
-
 
 /*Footer*/
 footer {

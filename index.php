@@ -6,16 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <link rel="shortcut icon" href="images/LogoZhongli.ico">
-  <title>Zhongli Comic</title>
+  <title>Menu User</title>
 </head>
 <body>
   <header>
-    <a href="#"><h1><img src="images/Zhongli.png" width="45%"></h1></a>
+    <a href="#"><h1><img src="images/Zhongli.png" width="140px" height="120px"></h1></a>
     <nav>
       <a> Cari Komik <input type="text"></a>
       <a href="index.php">Home</a>
       <a href="menu_tambah.php">Request Komik</a>
-      <a href="#biodata" class="me">About Me</a>
       <a href="login_user.php" class="me">Log Out</a>
     </nav>
   </header>
@@ -92,35 +91,18 @@
         </div>
       </div>
     </div>
-
-    <div id="biodata">
-      <img src="images/foto profil.jpg" alt="Foto Profile">
-      <div class="data">
-        <p>Nama</p>
-        <p>NIM</p>
-        <p>Program Studi</p>
-        <p>Angkatan</p>
-        <p>No. HP</p>
-        <p>Hobi</p>
-      </div>
-      <div class="data">
-        <p>: Muhammad Irvan Hakim</p>
-        <p>: 2109106057</p>
-        <p>: Informatika</p>
-        <p>: 2021</p>
-        <p>: 081346606222</p>
-        <p>: Main Tekken 7 dan Fall Guys</p>
-      </div>
-    </div>
+    <br>
+    <br>
   </main>
 
   <footer>
     <nav>
+      <br>
       <a href="https://youtube.com/channel/UCjRc-gYlqHi1x9fwCMeVEGw">Youtube</a>
       <a href="https://instagram.com/mirvanhakimmm">Instagram</a>
       <a href="https://www.tiktok.com/@muhammad_irvan_hakim?_t=8VzzYA3N1qj&_r=1">TikTok</a>
     </nav>
-    <p>&copy Copyright 2022 - by Irvan </p>
+    <p>&copy Copyright 2022 - by Kelompok 4 </p>
   </footer>
 
   <script src="script.js"></script>
