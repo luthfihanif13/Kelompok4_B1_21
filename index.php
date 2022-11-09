@@ -1,7 +1,7 @@
 <?php
   include 'koneksi.php';
-  if(!isset($_SESSION['login_user'])){
-    header("location:login_user.php");
+  if(!isset($_SESSION['login'])){
+    header("location: login_user.php");
     exit;
   }
 ?>
