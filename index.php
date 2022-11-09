@@ -12,21 +12,19 @@
   <header>
     <a href="#"><h1><img src="images/Zhongli.png" width="45%"></h1></a>
     <nav>
-      <a href="#home">Home</a>
-      <a>Cari Komik <input type="text"></a>
+      <a> Cari Komik <input type="text"></a>
+      <a href="index.php">Home</a>
       <a href="menu_tambah.php">Request Komik</a>
       <a href="#biodata" class="me">About Me</a>
       <a href="login_user.php" class="me">Log Out</a>
     </nav>
   </header>
-
   <div class="mode">
     <p id="change-mode">Dark Mode</p>
     <img id="icon-mode" src="images/moon.png" alt="">
     <input type="checkbox" onclick="lightMode()">
     <br>
   </div>
-  
   <main>
       <br>
       <h2><img src="images/jujutsu kaisen.jpg" width="100%" height="500px"></h2>

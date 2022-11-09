@@ -44,7 +44,6 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-
 a {
   text-decoration: none;
 }
@@ -105,6 +104,11 @@ header nav a:hover {
 
 .mode p {
   margin: 0 10px;
+}
+
+.mode img {
+  width: 25px;
+  margin: 0 10px 0 0;
 }
 
 .mode img {
