@@ -35,7 +35,7 @@
                 window.onload = function () { alert("Username atau Password Salah!"); } 
             </script>'; 
     }?>
-   <form action="index.php" method="post" class="box">
+   <form method="post" class="box">
        <div class="header_user">
            <h1>LOGIN USER</h1>
        </div>
