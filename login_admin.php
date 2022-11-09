@@ -1,3 +1,22 @@
+<?php 
+    session_start();
+    $username_admin = 'admin';
+    $pass_admin = 'admin';
+    if (isset($_POST['submit'])) {
+        if ($_POST['username'] == $username_admin && $_POST['password'] == $pass_admin){
+            //Membuat Session
+            $_SESSION["username"] = $username_admin; 
+            //Pindahkan Kehalaman Admin
+            header("Location: menu_admin.php"); 
+        }else{
+            // Tampilkan Pesan Error
+            echo '<script type="text/javascript">
+                    window.onload = function () { alert("Username atau Password Salah!"); } 
+                </script>'; 
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,14 +29,14 @@
 </head>
 <body>
    <div class="overlay"></div>
-   <form action="menu_admin.php" method="post" class="box">
+   <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" class="box">
        <div class="header_admin">
            <h1>LOGIN ADMIN</h1>
        </div>
        <div class="login-area">
-           <input type="text" class="username" placeholder="Username">
-           <input type="password" class="password" placeholder="Password">
-           <input type="submit" value="Login" class="submit">
+           <input type="text" class="username" placeholder="Username" name="username" required>
+           <input type="password" class="password" placeholder="Password" name="password" required>
+           <input type="submit" value="Login" class="submit" name="submit">
            <a href="login_user.php">Beralih ke User?</a>
        </div>
    </form>
