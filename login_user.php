@@ -1,7 +1,7 @@
 <?php
     include 'koneksi.php';
 
-    if(isset($_POST['login_user'])){
+    if(isset($_POST['login'])){
         $username = $_POST['nama'];
         $password = $_POST['password'];
 
@@ -9,8 +9,8 @@
         if(mysqli_num_rows($result) == 1){
             $row = mysqli_fetch_assoc($result);
             if(password_verify($password, $row['password'])){
-                $_SESSION['login_user'] = true;
-                header("location:index.php");
+                $_SESSION['login'] = true;
+                header("location: index.php");
                 exit;
             }
         }
@@ -42,7 +42,7 @@
        <div class="login-area">
            <input type="text" class="username" placeholder="Username" name="username" id="username">
            <input type="password" class="password" placeholder="Password" type="password" name="password">
-           <input type="submit" name="login_user" class="submit">
+           <input type="submit" name="login" class="submit">
            <a href="login_admin.php">Beralih ke Admin?</a>
            <a href="register.php">Belum punya akun? Register</a>
        </div>
