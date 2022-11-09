@@ -5,7 +5,7 @@
         $username = $_POST['nama'];
         $password = $_POST['password'];
 
-        $result = mysqli_query($connect, "SELECT * FROM akun WHERE nama ='$username'");
+        $result = mysqli_query($conn, "SELECT * FROM akun WHERE nama ='$username'");
         if(mysqli_num_rows($result) == 1){
             $row = mysqli_fetch_assoc($result);
             if(password_verify($password, $row['password'])){
