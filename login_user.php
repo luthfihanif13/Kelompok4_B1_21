@@ -42,7 +42,7 @@
        <div class="login-area">
            <input type="text" class="username" placeholder="Username" name="username" id="username">
            <input type="password" class="password" placeholder="Password" type="password" name="password">
-           <input type="submit" name="login" class="submit">
+           <input type="submit" value="login" name="login" class="submit">
            <a href="login_admin.php">Beralih ke Admin?</a>
            <a href="register.php">Belum punya akun? Register</a>
        </div>
