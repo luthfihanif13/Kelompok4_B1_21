@@ -1,5 +1,5 @@
 <?php
-    include "../connector.php";
+    include "../koneksi.php";
 ?>
 
 <!DOCTYPE html>
