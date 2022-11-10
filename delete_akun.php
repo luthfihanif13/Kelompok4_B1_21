@@ -1,5 +1,5 @@
 <?php
-    include "../koneksi.php";
+    include "koneksi.php";
 
     $idAkun = $_GET['id'];
     $query = mysqli_query($conn, "DELETE FROM akun WHERE id='$idAkun'");
