@@ -38,7 +38,7 @@
                 <tr>
                     <th><?= $no++ ?></th>
                     <td><input type="text" size="15" readonly value="<?= $rowAkun['id'] ?>"></td>
-                    <td><input type="text" size="15" readonly value="<?= $rowAkun['namaakun'] ?>"></td>
+                    <td><input type="text" size="15" readonly value="<?= $rowAkun['nama'] ?>"></td>
                     <td><a href="delete.php?id=<?= $rowAkun['id'] ?>" class="delete"> Hapus </a></td>
                 </tr>
         <?php 
