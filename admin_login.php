@@ -36,7 +36,7 @@
        <div class="login-area">
            <input type="text" class="username" placeholder="Username" name="username" required>
            <input type="password" class="password" placeholder="Password" name="password" required>
-           <input type="submit" class="submit" name="submit">
+           <button type="submit" name="submit" class="submit">Login</button>
            <a href="user_login.php">Beralih ke User?</a>
        </div>
    </form>

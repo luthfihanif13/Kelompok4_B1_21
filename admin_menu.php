@@ -22,7 +22,8 @@
     <nav>
       <a> Cari Komik <input type="text"></a>
       <a href="admin_menu.php">Home</a>
-      <a href="admin_lihat_request.php">Request Komik</a>
+      <a href="admin_lihat_request.php">Lihat Request Komik</a>
+      <a href="admin_lihat_akun_user.php">Lihat Akun</a>
       <a href="admin_login.php" class="me">Log Out</a>
     </nav>
   </header>
@@ -37,7 +38,7 @@
       <h2><img src="images/jujutsu kaisen.jpg" width="100%" height="500px"></h2>
       <div  class="info">
         <h2>Jujutsu Kaisen</h2>
-        <p><a href="#biodata" class="me">Baca Sekarang!</a>
+        <p><a href="dataKomik/Jujutsu Kaisen Vol.01.pdf" target="_blank" class="me">Baca Sekarang!</a>
         </p>
         <br>
         </div>
