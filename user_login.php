@@ -1,16 +1,16 @@
 <?php
-    include 'koneksi.php';
+    include 'proses_koneksi.php';
 
     if(isset($_POST['login'])){
-        $username = $_POST['username'];
+        $nama = $_POST['nama'];
         $password = $_POST['password'];
 
-        $result = mysqli_query($conn, "SELECT * FROM akun WHERE username ='$username'");
+        $result = mysqli_query($conn, "SELECT * FROM akun WHERE nama ='$nama'");
         if(mysqli_num_rows($result) == 1){
             $row = mysqli_fetch_assoc($result);
             if(password_verify($password, $row['password'])){
                 $_SESSION['login'] = true;
-                header("location: index.php");
+                header("location: user_menu.php");
                 exit;
             }
         }
@@ -32,7 +32,7 @@
    <div class="overlay"></div>
     <?php if(isset($error)){
         echo '<script type="text/javascript">
-                window.onload = function () { alert("Username atau Password Salah!"); } 
+                window.onload = function () { alert("nama atau Password Salah!"); } 
             </script>'; 
     }?>
    <form method="post" class="box">
@@ -40,11 +40,11 @@
            <h1>LOGIN USER</h1>
        </div>
        <div class="login-area">
-           <input type="text" class="username" placeholder="Username" name="username" id="username">
+           <input type="text" class="username" placeholder="nama" name="nama" id="nama">
            <input type="password" class="password" placeholder="Password" type="password" name="password">
            <button type="submit" name="login" class="submit">Login</button>
-           <a href="login_admin.php">Beralih ke Admin?</a>
-           <a href="register.php">Belum punya akun? Register</a>
+           <a href="admin_login.php">Beralih ke Admin?</a>
+           <a href="user_registrasi.php">Belum punya akun? Register</a>
        </div>
    </form> 
 </body>

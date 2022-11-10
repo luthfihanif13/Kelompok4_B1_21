@@ -1,61 +1,47 @@
 <?php
-require 'koneksi.php';
+require ('proses_koneksi.php');
+date_default_timezone_set('asia/kuala_lumpur');
 
 if (isset($_POST["tambah"])) {
-    $gambar = $_FILES['gambar']['name'];
     $nama = htmlspecialchars($_POST["nama"]);
     $genre = htmlspecialchars($_POST["genre"]);
     $jumlah_halaman = htmlspecialchars($_POST["jumlah_halaman"]);
     $tanggal_rilis = htmlspecialchars($_POST["tanggal_rilis"]);
-    $deskripsi = htmlspecialchars($_POST["deskripsi"]);
+    $sinopsis = htmlspecialchars($_POST["sinopsis"]);
+    $waktu_input = date("d-m-y  H:i:s");
+
+    $gambar = $_FILES['gambar']['name'];
     $x = explode('.', $gambar);
     $extensi = strtolower(end($x));
     $gambar_baru = "$nama.$extensi";
     $tmp = $_FILES['gambar']['tmp_name'];
 
-    $sql = "INSERT INTO request_komik VALUES ('', '$nama', '$genre', '$jumlah_halaman', '$tanggal_rilis','$deskripsi')";
-
-    $result = mysqli_query($conn, $sql);
-
-    if ( $result ) {
-        echo"
-            <script>
-                alert('Data berhasil ditambah');
-                document.location.href = 'index.php';
-            </script>
-        ";
-    }else{
-        echo"
-            <script>
-                alert('Data gagal ditambah');
-                document.location.href = 'tambah.php';
-            </script>
-        ";
-    }
-
     if (move_uploaded_file($tmp, 'img/'.$gambar_baru)) {
-      $result = mysqli_query($conn, "INSERT INTO gambar VALUES ('','$gambar_baru')");
-      if ($result) {
-          echo"
-              <script>
-                  alert('File berhasil diupload');
-                  href.location = 'read_file.php';
-              </script>
-          ";
-      }else{
-          echo"
-              <script>
-                  alert('File gagal diupload');
-              </script>
-          ";
-      }
-  }
+        $sql = "INSERT INTO request_komik VALUES ('', '$gambar_baru', '$genre', '$jumlah_halaman', '$tanggal_rilis','$sinopsis', '$waktu_input')";
+
+        $result = mysqli_query($conn, $sql);
+
+        if ( $result ) {
+            echo"
+                <script>
+                    alert('Data berhasil ditambah');
+                    document.location.href = 'user_menu.php';
+                </script>
+            ";
+        }else{
+            echo"
+                <script>
+                    alert('Data gagal ditambah');
+                    document.location.href = 'user_tambah_request.php';
+                </script>
+            ";
+        }
+    }
 }
 
-
-
-
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -117,8 +103,13 @@ if (isset($_POST["tambah"])) {
         <input type="number" name="jumlah_halaman" required><br><br>
         <label for="tanggal_rilis">Tanggal Rilis : </label>
         <input type="date" name="tanggal_rilis" required><br><br>
-        <label for="deskripsi">Deskripsi : </label>
-        <input type="text" name="deskripsi" required><br><br>
+        <div class="inputBox"
+        style="display: flex;
+        align-items: center;">
+            <label style="margin-right: 10px;"for="sinopsis">Sinopsis : </label>
+            <textarea style="width: 40%; height:100px; resize: none;" name="" id="" cols="30" rows="10"></textarea>
+        </div>
+        <!-- <input style="" type="text" name="sinopsis" required><br><br> -->
         <button type="submit" name="tambah">Tambah</button>
     </form>
     </div>

@@ -1,30 +1,30 @@
 <?php 
-include 'koneksi.php';
+include 'proses_koneksi.php';
 if(isset($_POST['register'])){
-    $username = $_POST['username'];
+    $nama = $_POST['nama'];
     $password = $_POST['password'];
     $cpassword = $_POST['confirm-pass'];
 
     if($password === $cpassword){
         $password = password_hash($password, PASSWORD_DEFAULT);
-        $result = mysqli_query($conn, "SELECT * FROM akun WHERE username = '$username'");
+        $result = mysqli_query($conn, "SELECT * FROM akun WHERE nama = '$nama'");
         if(mysqli_fetch_assoc($result)){
             echo "<script>
-            alert('Username Sudah digunakan');
-            document.location.href = 'register.php';
+            alert('nama Sudah digunakan');
+            document.location.href = 'user_registrasi.php';
             </script>";
         }else {
-            $sql = "INSERT INTO akun (username, password) VALUES ('$username', '$password')";
+            $sql = "INSERT INTO akun (nama, password) VALUES ('$nama', '$password')";
             $result = mysqli_query($conn, $sql);
             if(mysqli_affected_rows($conn) > 0) {
                 echo "<script>
                 alert('Registrasi Telah Berhasil');
-                document.location.href ='login_user.php';
+                document.location.href ='user_login.php';
                 </script>";
             } else{
                 echo "<script>
                 alert('Registrasi Gagal!!!');
-                document.location.href ='login_user.php';
+                document.location.href ='user_login.php';
                 </script>";
             }
         }
@@ -49,11 +49,11 @@ if(isset($_POST['register'])){
            <h1>REGISTRASI</h1>
        </div>
        <div class="login-area">
-           <input type="text" name="username" id="username" class="username" placeholder="Username" required>
+           <input type="text" name="nama" id="nama" class="username" placeholder="nama" required>
            <input type="password" name="password" id="password" class="password" placeholder="Password" required>
            <input type="password"  name="confirm-pass" id="confirm-pass" class="password" placeholder="Konfirmasi Password" required>
            <button type="submit" class="submit" name="register" id="register">Register</button>
-           <a href="login_user.php">Sudah punya akun? Login</a>
+           <a href="user_login.php">Sudah punya akun? Login</a>
        </div>
    </form> 
 </body>

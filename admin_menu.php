@@ -1,8 +1,8 @@
-<?php
-  include 'koneksi.php';
-  if(!isset($_SESSION['login'])){
-    header("location: login_user.php");
-    exit;
+<?php 
+  session_start();
+  
+  if (!isset($_SESSION['username'])) {
+      header("Location: admin_login.php");
   }
 ?>
 
@@ -12,18 +12,18 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <link rel="shortcut icon" href="images/LogoZhongli.ico">
-  <title>Menu User</title>
+  <link rel="stylesheet" href="style_admin.css">
+  <link rel="shortcut icon" href="images/LogoZhongliB.ico">
+  <title>Menu Admin</title>
 </head>
 <body>
   <header>
     <a href="#"><h1><img src="images/Zhongli.png" width="140px" height="120px"></h1></a>
     <nav>
       <a> Cari Komik <input type="text"></a>
-      <a href="index.php">Home</a>
-      <a href="menu_tambah.php">Request Komik</a>
-      <a href="login_user.php" class="me">Log Out</a>
+      <a href="admin_menu.php">Home</a>
+      <a href="admin_lihat_request.php">Request Komik</a>
+      <a href="admin_login.php" class="me">Log Out</a>
     </nav>
   </header>
   <div class="mode">
