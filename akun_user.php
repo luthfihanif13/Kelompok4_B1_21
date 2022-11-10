@@ -13,7 +13,7 @@
 </head>
 <body>
     <form method="GET">
-        <h3 align="center">DAFTAR AKUN USER</h3>
+        <h3 align="center">LIST AKUN USER</h3>
         <div><input type="text" name="keyword" placeholder="Cari User" class="search-bar">
         <button type="submit" name="cari">Search</button></div>
         <table align="center" border="0" class="table">
@@ -27,7 +27,7 @@
             $no = 1;
             if(isset($_GET['cari'])){
                 $keyword = $_GET['keyword'];
-                $result = mysqli_query($conn, "SELECT * FROM akun WHERE nama LIKE '%$keyword%'");
+                $result = mysqli_query($conn, "SELECT * FROM akun WHERE username LIKE '%$keyword%'");
             } else{
             $result = mysqli_query($conn, "SELECT * FROM akun");
             }
@@ -38,7 +38,7 @@
                 <tr>
                     <th><?= $no++ ?></th>
                     <td><input type="text" size="15" readonly value="<?= $rowAkun['id'] ?>"></td>
-                    <td><input type="text" size="15" readonly value="<?= $rowAkun['nama'] ?>"></td>
+                    <td><input type="text" size="15" readonly value="<?= $rowAkun['username'] ?>"></td>
                     <td><a href="delete.php?id=<?= $rowAkun['id'] ?>" class="delete"> Hapus </a></td>
                 </tr>
         <?php 
