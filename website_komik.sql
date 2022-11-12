@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 09, 2022 at 03:23 PM
+-- Generation Time: Nov 12, 2022 at 03:57 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -29,9 +29,18 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `akun` (
   `id` int(11) NOT NULL,
-  `username` varchar(64) NOT NULL,
-  `password` varchar(64) NOT NULL
+  `nama` varchar(64) NOT NULL,
+  `password` varchar(64) NOT NULL,
+  `role` varchar(32) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `akun`
+--
+
+INSERT INTO `akun` (`id`, `nama`, `password`, `role`) VALUES
+(2, 'gial88', '$2y$10$ivZMpMxmxn2iHZURg8X9cOheDyi9pfb9BAmn.lz5p8HkjoTqL5MIS', ''),
+(3, 'irvan', '$2y$10$xSYzyZ2c13Xcft.BXWYNL.Qwz7s8BObFeL0wa3i03l8OvzUPieriW', '');
 
 -- --------------------------------------------------------
 
@@ -53,7 +62,8 @@ CREATE TABLE `feedback` (
 
 CREATE TABLE `komik` (
   `id` int(11) NOT NULL,
-  `nama` varchar(64) NOT NULL
+  `nama` varchar(64) NOT NULL,
+  `genre` varchar(32) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -68,8 +78,16 @@ CREATE TABLE `request_komik` (
   `genre` varchar(32) NOT NULL,
   `jumlah_halaman` int(16) NOT NULL,
   `tanggal_rilis` date NOT NULL,
-  `sinopsis` varchar(255) NOT NULL
+  `sinopsis` varchar(255) NOT NULL,
+  `waktu_input` varchar(32) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `request_komik`
+--
+
+INSERT INTO `request_komik` (`id`, `nama`, `genre`, `jumlah_halaman`, `tanggal_rilis`, `sinopsis`, `waktu_input`) VALUES
+(3, 'b.png', 'b', 3, '2222-12-03', 'e', '10-11-22  05:01:35');
 
 --
 -- Indexes for dumped tables
@@ -107,7 +125,7 @@ ALTER TABLE `request_komik`
 -- AUTO_INCREMENT for table `akun`
 --
 ALTER TABLE `akun`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `feedback`
@@ -125,7 +143,7 @@ ALTER TABLE `komik`
 -- AUTO_INCREMENT for table `request_komik`
 --
 ALTER TABLE `request_komik`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
