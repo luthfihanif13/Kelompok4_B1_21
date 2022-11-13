@@ -11,6 +11,68 @@
     <link rel="stylesheet" href="style_admin.css">
     <link rel="shortcut icon" href="images/LogoZhongliB.ico">
     <title>Menu Admin</title>
+    <style>
+        h3{
+            padding-top: 50px;
+            font-size: 32px;
+            margin-bottom: 50px;
+        }
+        table th {
+            text-align: center;
+            background-color: #909090;
+            color: black;
+        }
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin-top: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 50px;
+            border: 2px solid black;
+        }
+        table td, table th {
+            border: 1px solid black;
+            background-color: #B6E388;
+            padding: 6px;
+            width: 100px;
+        }
+        .hapus a {
+            text-decoration: none;
+        }
+        tr td .delete{
+            background-color: #FF0000;
+            color: white;
+            padding: 5px 5px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .search-bar{
+            width: 25%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            margin-top: 10px;
+            margin-bottom: 15px;
+            margin-right: 50%;
+            resize: vertical;
+            float: right;
+        }
+        div button[type="submit"]{
+            background-color: black;
+            color: white;
+            margin-top: 10px;
+            margin-right: 10px;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+        }
+    </style>
 </head>
 <body>
 <header>
