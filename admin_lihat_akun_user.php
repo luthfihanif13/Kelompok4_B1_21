@@ -27,7 +27,7 @@
             $no = 1;
             if(isset($_GET['cari'])){
                 $keyword = $_GET['keyword'];
-                $result = mysqli_query($conn, "SELECT * FROM akun WHERE nama or id LIKE '%$keyword%'");
+                $result = mysqli_query($conn, "SELECT * FROM akun WHERE nama LIKE '%$keyword%'");
             } else{
             $result = mysqli_query($conn, "SELECT * FROM akun");
             }
