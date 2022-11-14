@@ -20,7 +20,4 @@ if ( $result ) {
         </script>
     ";
 }
-
-
-
 ?>

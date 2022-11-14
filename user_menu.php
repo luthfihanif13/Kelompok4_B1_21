@@ -59,7 +59,7 @@
       <?php $i = 1; foreach ($komik as $kmk):?>
         <div class="card">
           <?php echo"<img src='img/$kmk[sampul]'>";?>
-          <p><?php echo"<a href='dataKomik/$kmk[nama]' target='_blank'>$kmk[nama]</a>";?></p>
+          <p><?php echo"<a href='dataKomik/$kmk[data_komik]' target='_blank'>$kmk[nama]</a>";?></p>
           <p><span class="genre"><?php echo $kmk["genre"] ;?></span></p>
         </div>
         <?php $i++; endforeach;?>
