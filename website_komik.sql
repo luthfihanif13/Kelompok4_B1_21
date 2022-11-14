@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 14, 2022 at 07:33 AM
+-- Generation Time: Nov 14, 2022 at 02:37 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -51,8 +51,15 @@ CREATE TABLE `feedback` (
   `id` int(11) NOT NULL,
   `nama_user` varchar(64) NOT NULL,
   `isi_feedback` varchar(255) NOT NULL,
-  `waktu_input` varchar(32) NOT NULL
+  `waktu_upload` varchar(32) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `feedback`
+--
+
+INSERT INTO `feedback` (`id`, `nama_user`, `isi_feedback`, `waktu_upload`) VALUES
+(2, 'Irvan', 'Website nya bisa dibetulin lagi yaa\r\n', '14-11-22  21:35:53');
 
 -- --------------------------------------------------------
 
@@ -74,7 +81,16 @@ CREATE TABLE `komik` (
 --
 
 INSERT INTO `komik` (`id`, `sampul`, `data_komik`, `nama`, `genre`, `waktu_upload`) VALUES
-(8, 'Detective Conan.jpg', 'Detective Conan.pdf', 'Detective Conan', 'Mystery', '14-11-22  14:25:35');
+(9, 'Assasination Classroom (Vol. 01).jpg', 'Assasination Classroom (Vol. 01).pdf', 'Assasination Classroom (Vol. 01)', 'Comedy', '14-11-22  20:21:59'),
+(10, 'Attack On Titan (Vol. 1).jpg', 'Attack On Titan (Vol. 1).pdf', 'Attack On Titan (Vol. 1)', 'Action, Thriller', '14-11-22  20:22:50'),
+(11, 'Boku no Hero Academia (Vol.01).jpg', 'Boku no Hero Academia (Vol.01).pdf', 'Boku no Hero Academia (Vol.01)', 'Action, Drama', '14-11-22  20:24:08'),
+(12, 'Chainsaw Man (Vol.01).jpg', 'Chainsaw Man (Vol.01).pdf', 'Chainsaw Man (Vol.01)', 'Action, Thriller', '14-11-22  20:25:06'),
+(13, 'Demon Slayer (Vol. 01).jpg', 'Demon Slayer (Vol. 01).pdf', 'Demon Slayer (Vol. 01)', 'Drama, Thriller', '14-11-22  21:04:17'),
+(14, 'Detective Conan (Vol. 1047).jpg', 'Detective Conan (Vol. 1047).pdf', 'Detective Conan (Vol. 1047)', 'Mystery, Drama', '14-11-22  21:05:17'),
+(16, 'Naruto (Vol. 01).jpg', 'Naruto (Vol. 01).pdf', 'Naruto (Vol. 01)', 'Action, Slice Of Life', '14-11-22  21:09:09'),
+(17, 'One Punch Man (Vol.01).png', 'One Punch Man (Vol.01).pdf', 'One Punch Man (Vol.01)', 'Comedy, Action', '14-11-22  21:09:46'),
+(18, 'Spider-Man Vol.01.jpeg', 'Spider-Man Vol.01.pdf', 'Spider-Man Vol.01', 'Action', '14-11-22  21:15:02'),
+(19, 'Tokyo Ghoul (Vol. 01).jpg', 'Tokyo Ghoul (Vol. 01).pdf', 'Tokyo Ghoul (Vol. 01)', 'Thriller, Drama', '14-11-22  21:15:55');
 
 -- --------------------------------------------------------
 
@@ -97,7 +113,7 @@ CREATE TABLE `request_komik` (
 --
 
 INSERT INTO `request_komik` (`id`, `nama`, `genre`, `jumlah_halaman`, `tanggal_rilis`, `sinopsis`, `waktu_input`) VALUES
-(3, 'b.png', 'b', 3, '2222-12-03', 'i', '14-11-22  01:59:51');
+(5, 'Chainsaw Man (Vol.02).jpg', 'Action, Thriller', 189, '2018-12-03', 'Manga ini menceritakan seorang remaja berusia 16 tahun bernama Denji yang rela melakukan pekerjaan apa saja termasuk memburu para iblis demi melunasi hutang ayahnya kepada Yakuza. iya di temani dengan Phocita, seekor anjing iblis bergeraji yang di selamat', '14-11-22  13:34:39');
 
 --
 -- Indexes for dumped tables
@@ -141,19 +157,19 @@ ALTER TABLE `akun`
 -- AUTO_INCREMENT for table `feedback`
 --
 ALTER TABLE `feedback`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `komik`
 --
 ALTER TABLE `komik`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `request_komik`
 --
 ALTER TABLE `request_komik`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

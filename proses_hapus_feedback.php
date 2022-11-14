@@ -9,14 +9,14 @@ if ( $result ) {
     echo"
         <script>
             alert('Data berhasil dihapus');
-            document.location.href = 'user_menu.php';
+            document.location.href = 'admin_menu_feedback.php';
         </script>
     ";
 }else{  
     echo"
         <script>
             alert('Data gagal dihapus');
-            document.location.href = 'user_menu_feedback.php';
+            document.location.href = 'admin_menu_feedback.php';
         </script>
     ";
 }

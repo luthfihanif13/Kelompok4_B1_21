@@ -31,11 +31,22 @@ while ($row = mysqli_fetch_assoc($result)) {
     .container {
       width: 60%;
       height: 60vh;
-      display: flex;
+
       flex-direction: column;
       justify-content: center;
       background: rgb(117, 159, 26);
       border-radius: 10px;
+    }
+
+    .tambah-button{
+      background-color: rgb(107, 202, 81);
+      padding: 10px 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      margin-bottom: auto;
+      
     }
 
     .container h1 {
@@ -60,7 +71,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 <body>
     <div class="container">
     <h1>Daftar komik</h1>
-    <button><a href="admin_tambah_komik.php">Tambah komik</a></button>
+    <button class="tambah-button" ><a href="admin_tambah_komik.php">Tambah komik</a></button>
     <table border=1px>
         <tr>
             <th>No.</th>

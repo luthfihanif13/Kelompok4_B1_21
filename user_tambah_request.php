@@ -145,9 +145,8 @@ if (isset($_POST["tambah"])) {
         style="display: flex;
         align-items: center;">
             <label style="margin-right: 10px;"for="sinopsis">Sinopsis : </label>
-            <textarea style="width: 40%; height:100px; resize: none;" name="" id="" cols="30" rows="10" class="input-text"></textarea>
+            <textarea style="width: 40%; height:100px; resize: none;" type="text" name="sinopsis" cols="30" rows="10" class="input-text"></textarea>
         </div>
-        <!-- <input style="" type="text" name="sinopsis" required><br><br> -->
         <button type="submit" name="tambah">Tambah</button>
     </form>
     </div>
