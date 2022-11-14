@@ -26,14 +26,37 @@
   <link rel="stylesheet" href="style.css">
   <link rel="shortcut icon" href="images/LogoZhongli.ico">
   <title>Menu User</title>
+  <style>
+    input[type="text"]{
+      width: 20%;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+      margin-right: 10px;
+      resize: vertical;
+      float: left;
+    }
+    button[type="submit"] {
+      background-color: black;
+      color: white;
+      margin-right: 60px;
+      padding: 8px 10px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      float: left;
+    }
+
+  </style>
 </head>
 <body>
   <header>
     <a href="#"><h1><img src="images/Zhongli.png" width="140px" height="120px"></h1></a>
     <nav>
       <form method="GET">
-      <a><input type="text" name="keyword" placeholder="Nama Komik">
-      <button type="submit" name="cari">Cari Komik</button></a>
+      <div><input type="text" name="keyword" placeholder="Nama Komik">
+      <button type="submit" name="cari">Cari Komik</button></div>
       </form>
       <a href="user_menu.php">Home</a>
       <a href="user_menu_request.php">Request Komik</a>
