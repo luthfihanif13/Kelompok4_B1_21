@@ -3,5 +3,5 @@
     session_unset();
     session_destroy();
 
-    header("Location: user_menu.php");
+    header("Location: user_login.php");
 ?>

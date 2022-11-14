@@ -3,11 +3,13 @@
   if (!isset($_SESSION['username'])) {
       header("Location: admin_login.php");
   }
-
+  if(isset($_GET['cari'])){
+    $keyword = $_GET['keyword'];
+    $result = mysqli_query($conn, "SELECT * FROM komik WHERE nama LIKE '%$keyword%'");
+  } else{
   $result = mysqli_query($conn, "SELECT * FROM komik");
-
+  }
   $komik = [];
-
   while ($row = mysqli_fetch_assoc($result)) {
       $komik[] = $row;
   }
@@ -25,9 +27,12 @@
 </head>
 <body>
   <header>
-    <a href="#"><h1><img src="images/ZhongliB.png" width="140px" height="120px"></h1></a>
-    <nav>
-      <a> Cari Komik <input type="text"></a>
+      <a href="#"><h1><img src="images/ZhongliB.png" width="140px" height="120px"></h1></a>
+      <nav>
+      <form method="GET">
+      <a><input type="text" name="keyword" placeholder="Nama Komik">
+      <button type="submit" name="cari">Cari Komik</button></a>
+      </form>
       <a href="admin_menu.php">Home</a>
       <a href="admin_crud_komik.php">Data Komik</a>
       <a href="admin_lihat_request.php">Lihat Request</a>
