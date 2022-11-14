@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 12, 2022 at 03:57 AM
+-- Generation Time: Nov 14, 2022 at 07:33 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -30,17 +30,16 @@ SET time_zone = "+00:00";
 CREATE TABLE `akun` (
   `id` int(11) NOT NULL,
   `nama` varchar(64) NOT NULL,
-  `password` varchar(64) NOT NULL,
-  `role` varchar(32) NOT NULL
+  `password` varchar(64) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `akun`
 --
 
-INSERT INTO `akun` (`id`, `nama`, `password`, `role`) VALUES
-(2, 'gial88', '$2y$10$ivZMpMxmxn2iHZURg8X9cOheDyi9pfb9BAmn.lz5p8HkjoTqL5MIS', ''),
-(3, 'irvan', '$2y$10$xSYzyZ2c13Xcft.BXWYNL.Qwz7s8BObFeL0wa3i03l8OvzUPieriW', '');
+INSERT INTO `akun` (`id`, `nama`, `password`) VALUES
+(2, 'gial88', '$2y$10$ivZMpMxmxn2iHZURg8X9cOheDyi9pfb9BAmn.lz5p8HkjoTqL5MIS'),
+(3, 'irvan', '$2y$10$xSYzyZ2c13Xcft.BXWYNL.Qwz7s8BObFeL0wa3i03l8OvzUPieriW');
 
 -- --------------------------------------------------------
 
@@ -51,7 +50,8 @@ INSERT INTO `akun` (`id`, `nama`, `password`, `role`) VALUES
 CREATE TABLE `feedback` (
   `id` int(11) NOT NULL,
   `nama_user` varchar(64) NOT NULL,
-  `isi_feedback` varchar(255) NOT NULL
+  `isi_feedback` varchar(255) NOT NULL,
+  `waktu_input` varchar(32) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -62,9 +62,19 @@ CREATE TABLE `feedback` (
 
 CREATE TABLE `komik` (
   `id` int(11) NOT NULL,
+  `sampul` varchar(64) NOT NULL,
+  `data_komik` varchar(64) NOT NULL,
   `nama` varchar(64) NOT NULL,
-  `genre` varchar(32) NOT NULL
+  `genre` varchar(32) NOT NULL,
+  `waktu_upload` varchar(32) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `komik`
+--
+
+INSERT INTO `komik` (`id`, `sampul`, `data_komik`, `nama`, `genre`, `waktu_upload`) VALUES
+(8, 'Detective Conan.jpg', 'Detective Conan.pdf', 'Detective Conan', 'Mystery', '14-11-22  14:25:35');
 
 -- --------------------------------------------------------
 
@@ -87,7 +97,7 @@ CREATE TABLE `request_komik` (
 --
 
 INSERT INTO `request_komik` (`id`, `nama`, `genre`, `jumlah_halaman`, `tanggal_rilis`, `sinopsis`, `waktu_input`) VALUES
-(3, 'b.png', 'b', 3, '2222-12-03', 'e', '10-11-22  05:01:35');
+(3, 'b.png', 'b', 3, '2222-12-03', 'i', '14-11-22  01:59:51');
 
 --
 -- Indexes for dumped tables
@@ -137,13 +147,13 @@ ALTER TABLE `feedback`
 -- AUTO_INCREMENT for table `komik`
 --
 ALTER TABLE `komik`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `request_komik`
 --
 ALTER TABLE `request_komik`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
