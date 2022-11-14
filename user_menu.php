@@ -29,12 +29,10 @@
   <style>
     input[type="text"]{
       width: 20%;
-      padding: 10px;
+      padding: 5px;
       border: 1px solid #ccc;
       border-radius: 5px;
       box-sizing: border-box;
-      margin-top: 10px;
-      margin-bottom: 15px;
       margin-right: 10px;
       resize: vertical;
       float: left;
@@ -42,9 +40,8 @@
     button[type="submit"] {
       background-color: black;
       color: white;
-      margin-top: 10px;
       margin-right: 60px;
-      padding: 12px 20px;
+      padding: 8px 10px;
       border: none;
       border-radius: 10px;
       cursor: pointer;
