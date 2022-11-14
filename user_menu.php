@@ -5,10 +5,13 @@
     exit;
   }
 
+  if(isset($_GET['cari'])){
+    $keyword = $_GET['keyword'];
+    $result = mysqli_query($conn, "SELECT * FROM komik WHERE nama LIKE '%$keyword%'");
+  } else{
   $result = mysqli_query($conn, "SELECT * FROM komik");
-
+  }
   $komik = [];
-
   while ($row = mysqli_fetch_assoc($result)) {
       $komik[] = $row;
   }
@@ -28,8 +31,11 @@
   <header>
     <a href="#"><h1><img src="images/Zhongli.png" width="140px" height="120px"></h1></a>
     <nav>
+      <form method="GET">
+      <a><input type="text" name="keyword" placeholder="Nama Komik">
+      <button type="submit" name="cari">Cari Komik</button></a>
+      </form>
       <a href="user_menu.php">Home</a>
-      <a> Cari Komik <input type="text"></a>
       <a href="user_menu_request.php">Request Komik</a>
       <a href="user_tambah_feedback.php">Feedback</a>
       <a href="user_login.php" class="me">Log Out</a>
