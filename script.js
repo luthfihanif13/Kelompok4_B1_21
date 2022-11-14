@@ -15,24 +15,3 @@ function lightMode(){
     document.getElementById("change-mode").innerHTML = mode
     document.getElementById("icon-mode").src = icon
 }
-
-// Pop Up
-function popUp(){
-    alert("Kami Akan Kembali")
-}
-
-// AddEventListener
-const button = document.querySelector(".btn-more")
-button.addEventListener("click", function view(){
-    let read = ""
-    const teks = document.querySelector("#teks")
-    if (teks.style.display == 'none'){
-        // Manipulasi DOM 2
-        teks.style.display = 'block'
-        read = "Read Less"
-    } else {
-        teks.style.display = 'none'
-        read = "Read More"
-    }
-    document.querySelector(".btn-more").innerHTML = read
-})

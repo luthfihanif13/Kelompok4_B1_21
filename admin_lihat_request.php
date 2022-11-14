@@ -70,10 +70,9 @@ while ($row = mysqli_fetch_assoc($result)) {
   <header>
     <a href="#"><h1><img src="images/ZhongliB.png" width="140px" height="120px"></h1></a>
     <nav>
-      <a> Cari Komik <input type="text"></a>
       <a href="admin_menu.php">Home</a>
-      <a href="admin_lihat_request.php">Lihat Request Komik</a>
       <a href="admin_lihat_akun_user.php">Lihat Akun</a>
+      <a href="admin_lihat_request.php">Lihat Feedback</a>
       <a href="admin_login.php" class="me">Log Out</a>
     </nav>
   </header>

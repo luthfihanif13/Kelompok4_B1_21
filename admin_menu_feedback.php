@@ -71,8 +71,8 @@ while ($row = mysqli_fetch_assoc($result)) {
   <header>
     <a href="#"><h1><img src="images/ZhongliB.png" width="140px" height="120px"></h1></a>
     <nav>
-      <a href="user_menu.php">Home</a>
-      <a href="user_menu_request.php">Request Komik</a>
+      <a href="admin_menu.php">Home</a>
+      <a href="admin_lihat_request.php">Request Komik</a>
       <a href="user_login.php" class="me">Log Out</a>
     </nav>
   </header>
