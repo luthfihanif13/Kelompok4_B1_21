@@ -5,7 +5,7 @@ date_default_timezone_set('asia/kuala_lumpur');
 if (isset($_POST["tambah"])) {
     $nama = htmlspecialchars($_POST["nama"]);
     $genre = htmlspecialchars($_POST["genre"]);
-    $waktu_input = date("d-m-y  H:i:s");
+    $waktu_upload = date("d-m-y  H:i:s");
 
     $gambar = $_FILES['gambar']['name'];
     $x = explode('.', $gambar);
@@ -20,7 +20,7 @@ if (isset($_POST["tambah"])) {
     $tmp1 = $_FILES['pdf']['tmp_name'];
 
     if (move_uploaded_file($tmp, 'img/'.$gambar_baru ) && move_uploaded_file($tmp1, 'dataKomik/'.$pdf_baru)) {
-        $sql = "INSERT INTO komik VALUES ('', '$gambar_baru', '$pdf_baru', '$genre','$waktu_input')";
+        $sql = "INSERT INTO komik VALUES ('', '$gambar_baru', '$pdf_baru', '$nama', '$genre','$waktu_upload')";
 
         $result = mysqli_query($conn, $sql);
         if ( $result ) {
