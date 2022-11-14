@@ -5,10 +5,13 @@
     exit;
   }
 
+  if(isset($_GET['cari'])){
+    $keyword = $_GET['keyword'];
+    $result = mysqli_query($conn, "SELECT * FROM komik WHERE nama LIKE '%$keyword%'");
+  } else{
   $result = mysqli_query($conn, "SELECT * FROM komik");
-
+  }
   $komik = [];
-
   while ($row = mysqli_fetch_assoc($result)) {
       $komik[] = $row;
   }
@@ -28,7 +31,10 @@
   <header>
     <a href="#"><h1><img src="images/Zhongli.png" width="140px" height="120px"></h1></a>
     <nav>
-      <a> Cari Komik <input type="text"></a>
+      <form method="GET">
+      <a><input type="text" name="keyword" placeholder="Nama Komik">
+      <button type="submit" name="cari">Cari Komik</button></a>
+      </form>
       <a href="user_menu.php">Home</a>
       <a href="user_menu_request.php">Request Komik</a>
       <a href="user_tambah_feedback.php">Feedback</a>
@@ -59,7 +65,7 @@
       <?php $i = 1; foreach ($komik as $kmk):?>
         <div class="card">
           <?php echo"<img src='img/$kmk[sampul]'>";?>
-          <p><?php echo"<a href='dataKomik/$kmk[nama]' target='_blank'>$kmk[nama]</a>";?></p>
+          <p><?php echo"<a href='dataKomik/$kmk[data_komik]' target='_blank'>$kmk[nama]</a>";?></p>
           <p><span class="genre"><?php echo $kmk["genre"] ;?></span></p>
         </div>
         <?php $i++; endforeach;?>

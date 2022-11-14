@@ -62,6 +62,7 @@ if (isset($_POST["tambah"])) {
     .container h1 {
       color: #8d6624;
       text-align: center;
+      margin-bottom: 50px;
     }
 
     table {
@@ -76,6 +77,11 @@ if (isset($_POST["tambah"])) {
       border: 2px solid #000000;
       padding: 20px 30px;
     }
+
+    form {
+      margin-bottom: 200px;
+      text-align: center;
+    }
     </style>
 </head>
 <body>
@@ -84,8 +90,12 @@ if (isset($_POST["tambah"])) {
     <form action="" method="post" enctype="multipart/form-data">
         <label for="nama_user">Nama User: </label>
         <input type="text" name="nama_user" required><br><br>
-        <label for="isi_feedback">Isi Feedback : </label>
-        <input type="text" name="isi_feedback" required><br><br>
+        <div class="inputBox"
+        style="display: flex;
+        align-items: center;">
+            <label style="margin-right: 10px;"for="isi_feedback">Isi Feedback : </label>
+            <textarea style="width: 40%; height:100px; resize: none;" type="text" name="isi_feedback" cols="30" rows="10" class="input-text" required></textarea>
+        </div>
         <button type="submit" name="tambah">Tambah</button>
     </form>
     </div>

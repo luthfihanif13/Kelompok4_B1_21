@@ -31,11 +31,22 @@ while ($row = mysqli_fetch_assoc($result)) {
     .container {
       width: 60%;
       height: 60vh;
-      display: flex;
+
       flex-direction: column;
       justify-content: center;
       background: rgb(117, 159, 26);
       border-radius: 10px;
+    }
+
+    .tambah-button{
+      background-color: rgb(107, 202, 81);
+      padding: 10px 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      margin-bottom: auto;
+      
     }
 
     .container h1 {
@@ -60,11 +71,11 @@ while ($row = mysqli_fetch_assoc($result)) {
 <body>
     <div class="container">
     <h1>Daftar komik</h1>
-    <button><a href="admin_tambah_komik.php">Tambah komik</a></button>
+    <button class="tambah-button" ><a href="admin_tambah_komik.php">Tambah komik</a></button>
     <table border=1px>
         <tr>
             <th>No.</th>
-            <th>Gambar</th>
+            <th>Sampul</th>
             <th>Nama</th>
             <th>Genre</th>
             <th>Waktu Upload</th>
@@ -74,9 +85,9 @@ while ($row = mysqli_fetch_assoc($result)) {
         <tr>
             <td><?php echo $i ;?></td>
             <td><?php echo"<img src='img/$kmk[sampul]' width='50' height='50'>";?></td>
-            <td><?php echo"<a href='dataKomik/$kmk[nama]' target='_blank'>$kmk[nama]</a>";?></td>
+            <td><?php echo"<a href='dataKomik/$kmk[data_komik]' target='_blank'>$kmk[nama]</a>";?></td>
             <td><?php echo $kmk["genre"] ;?></td>
-            <td><?php echo $kmk["waktu_input"] ;?></td>
+            <td><?php echo $kmk["waktu_upload"] ;?></td>
             <td><a href="proses_hapus_komik.php?id=<?php echo $kmk["id"]; ?>" onclick = "return confirm('Anda yakin ingin mengahpus data ini ?')">Hapus</a></td>
         </tr>
         <?php $i++; endforeach;?>

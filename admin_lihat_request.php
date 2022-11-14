@@ -68,7 +68,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 </head>
 <body>
   <header>
-    <a href="#"><h1><img src="images/Zhongli.png" width="140px" height="120px"></h1></a>
+    <a href="#"><h1><img src="images/ZhongliB.png" width="140px" height="120px"></h1></a>
     <nav>
       <a> Cari Komik <input type="text"></a>
       <a href="admin_menu.php">Home</a>
