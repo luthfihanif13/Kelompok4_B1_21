@@ -1,7 +1,7 @@
 <?php
   include 'proses_koneksi.php';
   if(!isset($_SESSION['login'])){
-    header("location: login_user.php");
+    header("location: user_login.php");
     exit;
   }
 

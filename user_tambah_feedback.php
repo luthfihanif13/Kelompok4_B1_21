@@ -62,6 +62,7 @@ if (isset($_POST["tambah"])) {
     .container h1 {
       color: #8d6624;
       text-align: center;
+      margin-bottom: 50px;
     }
 
     table {
@@ -75,6 +76,11 @@ if (isset($_POST["tambah"])) {
       text-align: left;
       border: 2px solid #000000;
       padding: 20px 30px;
+    }
+
+    form {
+      margin-bottom: 200px;
+      text-align: left;
     }
     </style>
 </head>
