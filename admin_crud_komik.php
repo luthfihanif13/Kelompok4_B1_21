@@ -76,7 +76,7 @@ while ($row = mysqli_fetch_assoc($result)) {
             <td><?php echo"<img src='img/$kmk[sampul]' width='50' height='50'>";?></td>
             <td><?php echo"<a href='dataKomik/$kmk[nama]' target='_blank'>$kmk[nama]</a>";?></td>
             <td><?php echo $kmk["genre"] ;?></td>
-            <td><?php echo $kmk["waktu_input"] ;?></td>
+            <td><?php echo $kmk["waktu_upload"] ;?></td>
             <td><a href="proses_hapus_komik.php?id=<?php echo $kmk["id"]; ?>" onclick = "return confirm('Anda yakin ingin mengahpus data ini ?')">Hapus</a></td>
         </tr>
         <?php $i++; endforeach;?>
