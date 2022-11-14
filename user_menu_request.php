@@ -70,6 +70,7 @@ while ($row = mysqli_fetch_assoc($result)) {
       border-collapse: collapse;
       background: rgb(241, 148, 26);
       color: #000000;
+      margin-bottom: auto;
     }
 
     th, td {
