@@ -48,26 +48,34 @@ if (isset($_POST["tambah"])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="images/LogoZhongli.ico">
-    <title>Tambah Data</title>
+    <title>Menu User</title>
     <style>
-    body {
-      width: 100%;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #8d6624;
+    .container {
+        width: 95%;
+        height: 85vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 10px;
+        margin-top: 25px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 25px;
+        align-items: center;
+        background: #ffad32;
     }
 
-    .container {
-      width: 60%;
-      height: 60vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      background: #ffad32;
-      border-radius: 10px;
+    button[type=submit]{
+        margin-bottom: 50px;
+        background-color: #8d6624;
+        color: white;
+        padding: 10px 10px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        text-decoration: none;
     }
 
     .container h1 {
@@ -75,43 +83,85 @@ if (isset($_POST["tambah"])) {
       text-align: center;
     }
 
-    table {
-      margin-bottom: auto;
-      border-collapse: collapse;
-      background: rgb(241, 148, 26);
-      color: #000000;
+    .input-text{
+        width: 50%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+        margin-top: 5px; 
+        resize: vertical;
     }
 
-    th, td {
-      text-align: left;
-      border: 2px solid #000000;
-      padding: 20px 30px;
+    .input-number{
+        width: 50%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+        margin-top: 5px; 
+        resize: vertical;
+    }
+    input[type=date]{
+        width: 50%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+        margin-top: 5px;
+        resize: vertical;
     }
     </style>
 </head>
 <body>
+    <header>
+    <a href="#"><h1><img src="images/Zhongli.png" width="140px" height="120px"></h1></a>
+    <nav>
+      <a> Cari Komik <input type="text"></a>
+      <a href="user_menu.php">Home</a>
+      <a href="user_menu_request.php">Request Komik</a>
+      <a href="user_login.php" class="me">Log Out</a>
+    </nav>
+  </header>
+  <div class="mode">
+    <p id="change-mode">Dark Mode</p>
+    <img id="icon-mode" src="images/moon.png" alt="">
+    <input type="checkbox" onclick="lightMode()">
+    <br>
+  </div>
     <div class="container">
     <h1>Tambah Data</h1>
     <form action="" method="post" enctype="multipart/form-data">
         <label for="">Upload Gambar : </label>
         <input type="file" name="gambar"><br>
         <label for="nama">Nama : </label>
-        <input type="text" name="nama" required><br><br>
+        <input type="text" class="input-text" name="nama" required><br><br>
         <label for="genre">Genre : </label>
-        <input type="text" name="genre" required><br><br>
-        <label for="jumlah_halaman">Jumlah Halaman : </label>
-        <input type="number" name="jumlah_halaman" required><br><br>
+        <input type="text" class="input-text" name="genre" required><br><br>
+        <label for="jumlah_halaman" >Jumlah Halaman : </label>
+        <input type="number" class="input-number" name="jumlah_halaman" required><br><br>
         <label for="tanggal_rilis">Tanggal Rilis : </label>
         <input type="date" name="tanggal_rilis" required><br><br>
         <div class="inputBox"
         style="display: flex;
         align-items: center;">
             <label style="margin-right: 10px;"for="sinopsis">Sinopsis : </label>
-            <textarea style="width: 40%; height:100px; resize: none;" name="" id="" cols="30" rows="10"></textarea>
+            <textarea style="width: 40%; height:100px; resize: none;" name="" id="" cols="30" rows="10" class="input-text"></textarea>
         </div>
         <!-- <input style="" type="text" name="sinopsis" required><br><br> -->
         <button type="submit" name="tambah">Tambah</button>
     </form>
     </div>
+    <footer>
+    <nav>
+      <br>
+      <a href="https://youtube.com/channel/UCjRc-gYlqHi1x9fwCMeVEGw">Youtube</a>
+      <a href="https://instagram.com/mirvanhakimmm">Instagram</a>
+      <a href="https://www.tiktok.com/@muhammad_irvan_hakim?_t=8VzzYA3N1qj&_r=1">TikTok</a>
+    </nav>
+    <p>&copy Copyright 2022 - by Kelompok 4 </p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
