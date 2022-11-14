@@ -1,5 +1,5 @@
 <?php
-require ('proses_koneksi.php');
+require ("proses_koneksi.php");
 $id = $_GET['id'];
 
 $result = mysqli_query($conn, "SELECT * FROM request_komik WHERE id=$id");
@@ -11,9 +11,6 @@ while ($row = mysqli_fetch_assoc($result)) {
 }
 
 $kmk = $request_komik[0];
-
-
-
 
 if (isset($_POST["tambah"])) {
     $nama = htmlspecialchars($_POST["nama"]);
