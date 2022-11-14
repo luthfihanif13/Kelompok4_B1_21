@@ -1,11 +1,9 @@
-<?php 
-  session_start();
-  
+<?php   
+  require('proses_koneksi.php');
   if (!isset($_SESSION['username'])) {
       header("Location: admin_login.php");
   }
 
-  require('proses_koneksi.php');
 
   $result = mysqli_query($conn, "SELECT * FROM komik");
 
@@ -35,6 +33,7 @@
       <a href="admin_crud_komik.php">Data Komik</a>
       <a href="admin_lihat_request.php">Lihat Request</a>
       <a href="admin_lihat_akun_user.php">Lihat Akun</a>
+      <a href="admin_menu_feedback.php">Feedback</a>
       <a href="admin_login.php" class="me">Log Out</a>
     </nav>
   </header>
