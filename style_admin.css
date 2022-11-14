@@ -19,21 +19,21 @@
   --info-blur: rgba(255, 255, 255, 0.15);
   --card-blur: rgba(255, 255, 255, 0.3);
   --shadow: #303030;
-  --genre-color: rgb(244, 240, 0);
+  --download-color: rgb(107, 202, 81);
   --footer: #000000;
 }
 
 .light-theme {
-  --theme: #8bff32;
+  --theme: #66bd23;
   --primary-color: #222222;
-  --secondary-color: #ddd310;
+  --secondary-color: #4e4b13;
   --hover-color: #666666;
   --nav-color: #7bf120;
-  --nav-blur: rgb(209, 241, 26);
+  --nav-blur: rgb(180, 207, 24);
   --info-blur: rgba(255, 255, 255, 0.15);
   --card-blur: rgba(0, 0, 0, 0.3);
   --shadow: #909090;
-  --genre-color: rgb(249, 241, 10);
+  --download-color: rgb(67, 175, 0);
   --footer: #fbfdff;
 }
 
@@ -83,7 +83,7 @@ header nav a:hover {
 
 .me {
   color: var(--primary-color);
-  background: var(--secondary-color);
+  background: var(--nav-color);
   border-radius: 10px;
   padding: 0.3rem 0.8rem;
   align-items: center;
@@ -241,7 +241,7 @@ input[type="checkbox"]:checked::before {
 }
 
 .genre {
-  color: var(--genre-color);
+  color: var(--download-color);
 }
 
 
@@ -323,6 +323,12 @@ footer p {
     font-size: 10px;
   }
 
+  #biodata {
+    font-size: 14px;
+    width: 65%;
+    margin: 3rem 0 4rem 0;
+    transform: translate(30%);
+  }
 
   footer nav a {
     font-size: 12px;
@@ -389,4 +395,10 @@ footer p {
     font-size: 9px;
   }
 
+  #biodata {
+    font-size: 10px;
+    width: 100%;
+    margin: 1rem 0 2rem 0;
+    transform: translate(0%);
+  }
 }
