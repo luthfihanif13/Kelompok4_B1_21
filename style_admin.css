@@ -19,7 +19,7 @@
   --info-blur: rgba(255, 255, 255, 0.15);
   --card-blur: rgba(255, 255, 255, 0.3);
   --shadow: #303030;
-  --download-color: rgb(107, 202, 81);
+  --download-color: rgb(202, 235, 52);
   --footer: #000000;
 }
 
@@ -33,7 +33,7 @@
   --info-blur: rgba(255, 255, 255, 0.15);
   --card-blur: rgba(0, 0, 0, 0.3);
   --shadow: #909090;
-  --download-color: rgb(67, 175, 0);
+  --download-color: rgb(202, 235, 52);
   --footer: #fbfdff;
 }
 
