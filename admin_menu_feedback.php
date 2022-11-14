@@ -16,9 +16,9 @@ while ($row = mysqli_fetch_assoc($result)) {
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <link rel="shortcut icon" href="images/LogoZhongli.ico">
-  <title>Menu User</title>
+  <link rel="stylesheet" href="style_admin.css">
+  <link rel="shortcut icon" href="images/LogoZhongliB.ico">
+  <title>Feedback</title>
     <style>
     .container {
       width: 95%;
@@ -32,7 +32,7 @@ while ($row = mysqli_fetch_assoc($result)) {
       margin-right: auto;
       margin-bottom: 25px;
       align-items: center;
-      background-color:#ddd310;
+      background-color:#B6E388;
     }
 
     .container h1 {
@@ -40,20 +40,7 @@ while ($row = mysqli_fetch_assoc($result)) {
       text-align: center;
       margin-bottom: 25px;
     }
-
-    .tambah-button{
-      background-color: rgb(241, 148, 26);
-      padding: 10px 10px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      text-decoration: none;
-      margin-bottom: auto;
-    }
     
-    .tambah-button a{
-      color: black;
-    }
 
     .edit-button{
       background-color: green;
@@ -68,7 +55,7 @@ while ($row = mysqli_fetch_assoc($result)) {
     table {
       margin-bottom: auto;
       border-collapse: collapse;
-      background: rgb(241, 148, 26);
+      background: rgb(117, 159, 26);
       color: #000000;
       margin-bottom: auto;
     }
@@ -82,7 +69,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 </head>
 <body>
   <header>
-    <a href="#"><h1><img src="images/Zhongli.png" width="140px" height="120px"></h1></a>
+    <a href="#"><h1><img src="images/ZhongliB.png" width="140px" height="120px"></h1></a>
     <nav>
       <a href="user_menu.php">Home</a>
       <a href="user_menu_request.php">Request Komik</a>

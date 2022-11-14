@@ -80,7 +80,7 @@ if (isset($_POST["tambah"])) {
 
     form {
       margin-bottom: 200px;
-      text-align: center;
+      text-align: left;
     }
     </style>
 </head>
