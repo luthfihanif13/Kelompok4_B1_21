@@ -19,7 +19,7 @@
   --info-blur: rgba(255, 255, 255, 0.15);
   --card-blur: rgba(255, 255, 255, 0.3);
   --shadow: #303030;
-  --download-color: rgb(107, 202, 81);
+  --genre-color: rgb(244, 240, 0);
   --footer: #000000;
 }
 
@@ -33,7 +33,7 @@
   --info-blur: rgba(255, 255, 255, 0.15);
   --card-blur: rgba(0, 0, 0, 0.3);
   --shadow: #909090;
-  --download-color: rgb(67, 175, 0);
+  --genre-color: rgb(249, 241, 10);
   --footer: #fbfdff;
 }
 
@@ -241,7 +241,7 @@ input[type="checkbox"]:checked::before {
 }
 
 .genre {
-  color: var(--download-color);
+  color: var(--genre-color);
 }
 
 
@@ -323,12 +323,6 @@ footer p {
     font-size: 10px;
   }
 
-  #biodata {
-    font-size: 14px;
-    width: 65%;
-    margin: 3rem 0 4rem 0;
-    transform: translate(30%);
-  }
 
   footer nav a {
     font-size: 12px;
@@ -395,10 +389,4 @@ footer p {
     font-size: 9px;
   }
 
-  #biodata {
-    font-size: 10px;
-    width: 100%;
-    margin: 1rem 0 2rem 0;
-    transform: translate(0%);
-  }
 }
